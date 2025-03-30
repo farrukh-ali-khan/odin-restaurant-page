@@ -15,6 +15,10 @@
     padding: 2rem;
     background-color: #333;
     text-align: center;
+    display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
   }
   
   .tab {
@@ -43,7 +47,7 @@
   
   .hero {
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 0;
   }
   
   .hero img {
@@ -73,3 +77,49 @@
     border-radius: 8px;
     margin: 2rem 0;
   }
+
+  /* Logo styles */
+.logo {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #ff6b6b;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 105px;
+    left: 0;
+    background: #333;
+  }
+
+  .nav-links.active {
+    display: flex;       
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    border-radius: 0;
+  }
+}

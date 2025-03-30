@@ -36,3 +36,29 @@ tabs.forEach((tab) => {
     }
   });
 });
+
+// Add this to index.js after tab switching logic
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// Close menu when clicking outside on mobile
+document.addEventListener("click", (e) => {
+  if (
+    window.innerWidth <= 768 &&
+    !e.target.closest(".hamburger") &&
+    !e.target.closest(".nav-links")
+  ) {
+    navLinks.classList.remove("active");
+  }
+});
+
+// Update menu state on window resize
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) {
+    navLinks.classList.remove("active");
+  }
+});

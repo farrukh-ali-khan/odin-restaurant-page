@@ -1,4 +1,5 @@
-import restaurantImg from "./restaurant.jpg";
+// src/home.js
+import restaurantImg from "./images/restaurant.jpg"; // Updated path
 
 export default function loadHome() {
   const content = document.getElementById("content");
@@ -8,7 +9,7 @@ export default function loadHome() {
   hero.className = "hero";
 
   const heading = document.createElement("h1");
-  heading.textContent = "Welcome to Gourmet Haven";
+  heading.textContent = "Welcome to Restaurant";
 
   const image = new Image();
   image.src = restaurantImg;
