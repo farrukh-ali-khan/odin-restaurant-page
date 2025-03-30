@@ -1,0 +1,126 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  .tabs {
+    padding: 2rem;
+    background-color: #333;
+    text-align: center;
+    display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .tab {
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .tab.active {
+    border-bottom: 3px solid #ff6b6b;
+  }
+  
+  .tab:hover {
+    opacity: 0.8;
+  }
+  
+  #content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .hero img {
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin: 2rem 0;
+    border-radius: 8px;
+  }
+  
+  .menu-items {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .menu-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .contact-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+
+  /* Logo styles */
+.logo {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #ff6b6b;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 105px;
+    left: 0;
+    background: #333;
+  }
+
+  .nav-links.active {
+    display: flex;       
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    border-radius: 0;
+  }
+}
+
